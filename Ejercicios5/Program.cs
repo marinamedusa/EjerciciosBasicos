@@ -97,6 +97,7 @@ namespace Ejercicios5
                 termino = termino + 11;
                 contador++;
             }
+            Console.WriteLine();
 
             //Mostrar los múltiplos de 8 hasta el valor 500. Debe aparecer en pantalla 8 - 16 - 24, etc
             Console.WriteLine("Ejercicio 5:");
@@ -108,6 +109,69 @@ namespace Ejercicios5
                 Console.Write(multiplo + " - ");
                 multiplo += 8;
             }
+            Console.WriteLine();
+
+
+            //Realizar un programa que permita cargar dos listas de 15 valores cada una. Informar con un mensaje cual
+            //de las dos listas tiene un valor acumulado mayor (mensajes "Lista 1 mayor", "Lista 2 mayor", "Listas iguales")
+            //Tener en cuenta que puede haber dos o más estructuras repetitivas en un algoritmo.
+            Console.WriteLine("Ejercicio 6:");
+            Console.ReadKey();
+
+            int lista1 = 0, lista2 = 0, numero;
+           // int contador;
+            contador = 0;
+
+
+            Console.WriteLine("Introduzca los valores de la primera lista ");
+            while (contador < 15)
+            {
+                numero = int.Parse(Console.ReadLine());
+                lista1 += numero;
+                contador++;
+            }
+            Console.WriteLine("Introduzca los valores de la segunda lista ");
+            contador = 0;
+            while (contador < 15)
+            {
+                numero = int.Parse(Console.ReadLine());
+                lista2 += numero;
+                contador++;
+            }
+            if (lista1 > lista2)
+            {
+                Console.WriteLine("La lista 1 es mayor.");
+            }
+            else if (lista2 > lista1)
+            {
+                Console.WriteLine("La lista 2 es mayor.");
+            }
+            else
+            {
+                Console.WriteLine("Las dos listas son iguales.");
+            }
+
+
+            //Desarrollar un programa que permita cargar n números enteros y luego nos informe cuántos valores fueron pares y cuántos impares.
+            //Emplear el operador “%” en la condición de la estructura condicional:
+            //if (valor % 2 == 0)         //Si el if da verdadero luego es par
+
+            //int n, numero;
+            Console.WriteLine("Introduzca el numero de enteros que va a introducir ");
+            int par = 0, impar = 0;
+            n = int.Parse(Console.ReadLine());
+            Console.WriteLine("Introduzca los numeros: ");
+            contador = 0;
+            while (contador < n)
+            {
+                numero = int.Parse(Console.ReadLine());
+                if (numero % 2 == 0)
+                    par++;
+                else
+                    impar++;
+                contador++;
+            }
+            Console.WriteLine("Hay {0} numeros pares y {1} impares", par, impar);
         }
     }
 }
